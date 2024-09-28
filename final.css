@@ -16,7 +16,7 @@
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #fefae0;
+    background-color: whitesmoke;
     position: absolute;
     top: 60px; 
     right: 0;
@@ -49,11 +49,11 @@
 
 
 header {
-  background-color: #fefae0;
+  background-color: whitesmoke;
   padding: 20px;
 }
 body{
-  background-color: #fefae0;
+  background-color: whitesmoke;
 }
 
 .navbar {
@@ -84,11 +84,11 @@ body{
   transition: background-color 0.15s; 
 }
 .apply-now-btn:hover{
-  background-color: #fefae0;
+  background-color: whitesmoke;
   color: black
 }
 .apply-now-btn:visited{
-  color:black;
+  color:whitesmoke;
 }
 .about-us-text {
   margin-bottom: 20px; 
@@ -119,9 +119,9 @@ html {
   font-weight: bold;
   transition: all 0.3s ease;
 }
-
+/*About - us Hover */
 .nav-links a:hover {
-  background-color: rgb(251, 146, 9);
+  background-color: rgb(161, 157, 157);
     border-radius: 10px;
     color: black;
     padding: 10px;
@@ -140,11 +140,11 @@ html {
 }
 
 .hero {
-  height: 50vh;
+  height: 150vh;
   position: relative;
   overflow: hidden;
   position: relative; 
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   
 }
 .about-us-container {
@@ -175,7 +175,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%; 
-  background-color:#fefae0; 
+  background-color:whitesmoke; 
   color: black;
   padding: 20px;
   text-align: center;
@@ -216,8 +216,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 0%;
+  height: 0%;
 
 }
 .logo img {
@@ -293,6 +293,15 @@ html {
   z-index: 1;
   color: white;
 }
+.hero-contents.hero-call-to-action{
+  position: relative;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: white;
+}
 
 .hero-content h1 {
   font-size: 48px;
@@ -342,7 +351,7 @@ html {
   margin-bottom: 10px;
 }
 .campus-life {
-  background-color: #fefae0;
+  background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -360,7 +369,9 @@ html {
   max-width: 1200px;
   grid-auto-rows: 200px;
 }
-
+.row {
+  margin-bottom: 30px;
+}
 .grid-item {
   background-color: #333;
   overflow: hidden;
@@ -378,7 +389,7 @@ html {
 
 .item1 {
   grid-column: span 2.5; 
-  grid-row: span 2.5;
+  grid-row: span 2;
 }
 
 .item2 {
@@ -387,12 +398,116 @@ html {
 }
 
 .item3 {
-  grid-column: span 2.5;
+  grid-column: span 2;
   grid-row: span 2.5;
 }
 
 .item4 {
   grid-column: span 2.5;
-  grid-row: span 2.5;
+  grid-row: span 2;
+}
+.vector-rsh {
+  height: 150px;
+  margin-bottom: 10px;
+  transition: transform 0.15s;
+}
+.vector-rsh:hover {
+  transform: scale(1.1);
+}
+.footer {
+  background-color: #636e79;
+  color: #fff;
+  padding: 30px 0;
 }
 
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f8f9fa;
+  text-decoration: underline;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  /* padding-bottom: 20px; */
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.slide > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.carousel.Xyz{
+  position: absolute;
+}
+.slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  position: absolute;
+  transition-delay: 0ms;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  background: none;
+  border: none;
+  font-size: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.carousel-button:focus {
+  outline: 1px solid black;
+}
+
+.carousel-button.prev {
+  left: 1rem;
+  align-items: center;
+}
+
+.carousel-button.next {
+  right: 1rem;
+  align-items: center;
+}
