@@ -5,7 +5,7 @@
 
 
 .burger-icon {
-  display: none;
+  display:none;
   font-size: 30px;
   cursor: pointer;
   color: #333;
@@ -22,21 +22,27 @@
     right: 0;
     width: 100%;
     text-align: center;
+    z-index: 3px;
   }
   
   .nav-links li {
-    display: block;
+    display: inline;
     margin: 10px 0;
+    z-index: 34px;
   }
 
 
   .burger-icon {
-    display: block;
+    display: inline;
   }
 
 
   .burger-checkbox:checked + .burger-icon + .nav-links {
     display: flex;
+    z-index: 34px;
+  }
+  .hero-content{
+    opacity: 0.5;
   }
 }
 
@@ -95,7 +101,106 @@ body{
   text-align: left; 
  
 }
+#contact-us {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
+#contact-us h2 {
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  cursor: pointer;
+
+}
+
+#contactForm input, 
+#contactForm textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contactForm button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+#contactForm button:hover {
+  background-color: #1787ff;
+  cursor: pointer;
+
+}
+#contact-form-wrapper{
+  display: none;
+}
+.contact-form-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.contact-form h2 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: darkblue;
+}
+
+/* Blur effect when form is visible */
+.blur {
+  filter: blur(8px);
+}
 .about-us-text h2 {
   font-size: 30px; 
   color: #333; 
@@ -104,6 +209,7 @@ body{
 
 .nav-links {
   list-style: none;
+  font-family: sans-serif;
 }
 
 .nav-links li {
@@ -414,21 +520,6 @@ html {
 .vector-rsh:hover {
   transform: scale(1.1);
 }
-.footer {
-  background-color: #636e79;
-  color: #fff;
-  padding: 30px 0;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  color: #f8f9fa;
-  text-decoration: underline;
-}
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -454,7 +545,7 @@ body {
 .slide {
   position: absolute;
   inset: 0;
-  /* padding-bottom: 20px; */
+ 
   opacity: 0;
   transition: 200ms opacity ease-in-out;
   transition-delay: 200ms;
